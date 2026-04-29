@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balance Connect-E</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Balance Connect-E</h1>
+      <span id="label-connexion" class="badge badge--disconnected">Déconnecté</span>
+    </header>
+
+    <section class="card" id="section-bluetooth">
+      <h2>Bluetooth</h2>
+      <button id="btn-connect" class="btn btn--primary">Se connecter</button>
+      <button id="btn-disconnect" class="btn btn--danger" disabled>Déconnecter</button>
+    </section>
+
+    <section class="card" id="section-mesure">
+      <h2>Mesure en cours</h2>
+      <p id="zone-texte" class="mesure-value">—</p>
+    </section>
+
+    <section class="card" id="section-liste">
+      <h2>Liste des poids</h2>
+      <ul id="liste-poids"></ul>
+      <button id="btn-vider" class="btn btn--warning">Vider la liste</button>
+    </section>
+
+    <section class="card" id="section-debug">
+      <h2>Débogage</h2>
+      <p>Données reçues : <span id="label-received"></span></p>
+      <p>Message utile : <span id="label-message-utile"></span></p>
+      <p>Résultat AES : <span id="label-resultat-aes"></span></p>
+    </section>
+  </div>
+
+  <!-- CryptoJS (AES) — loaded via unpkg, no SRI to keep the page functional
+       when the hash cannot be verified offline. Pin to an exact version for
+       reproducibility. Replace with a local copy for production use. -->
+  <script src="https://unpkg.com/crypto-js@4.2.0/crypto-js.js"
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="app.js"></script>
+</body>
+</html>

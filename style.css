@@ -1,0 +1,111 @@
+/* ── Reset & base ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  color: #2d3748;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* ── Layout ───────────────────────────────────────────────── */
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #2b6cb0;
+  border-radius: 0.75rem;
+  color: #fff;
+}
+
+header h1 { font-size: 1.25rem; }
+
+/* ── Cards ────────────────────────────────────────────────── */
+.card {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+
+.card h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #718096;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Badge (connection status) ────────────────────────────── */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+}
+.badge--disconnected { background: #fed7d7; color: #c53030; }
+.badge--connected    { background: #c6f6d5; color: #276749; }
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity .15s;
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
+}
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+.btn--primary { background: #3182ce; color: #fff; }
+.btn--danger  { background: #e53e3e; color: #fff; }
+.btn--success { background: #38a169; color: #fff; }
+.btn--warning { background: #dd6b20; color: #fff; }
+
+/* ── Mesure value ─────────────────────────────────────────── */
+.mesure-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2b6cb0;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+/* ── Weight list ──────────────────────────────────────────── */
+#liste-poids {
+  list-style: none;
+  max-height: 260px;
+  overflow-y: auto;
+  margin-bottom: 0.75rem;
+}
+
+#liste-poids li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #edf2f7;
+  font-size: 0.9rem;
+}
+
+#liste-poids li:last-child { border-bottom: none; }
+
+#liste-poids .weight { font-weight: 700; color: #2b6cb0; }
+#liste-poids .date   { color: #a0aec0; font-size: 0.8rem; }
+
+/* ── Debug section ────────────────────────────────────────── */
+#section-debug { font-size: 0.8rem; }
+#section-debug p { margin: 0.2rem 0; }
+#section-debug span { font-family: monospace; color: #553c9a; word-break: break-all; }
