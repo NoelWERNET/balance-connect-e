@@ -63,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       switch (etat) {
         case EtatBluetooth.connecte:
-          _statutMessage = '✅ Connecté à ${_appareilSelectionne?.name ?? "l\'appareil"}';
+          _statutMessage = "✅ Connecté à ${_appareilSelectionne?.name ?? "l'appareil"}";
           _chargement = false;
         case EtatBluetooth.connexionEnCours:
           _statutMessage = '🔄 Connexion en cours…';
