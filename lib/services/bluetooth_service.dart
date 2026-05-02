@@ -17,6 +17,9 @@ enum EtatBluetooth {
 
 /// Service de communication Bluetooth avec l'Arduino.
 class BluetoothService {
+  /// UUID du profil SPP (Serial Port Profile) Bluetooth Classic.
+  static const String _sppUuid = '00001101-0000-1000-8000-00805f9b34fb';
+
   final _plugin = BluetoothClassic();
   final StreamController<String> _messageController =
       StreamController<String>.broadcast();
@@ -52,7 +55,7 @@ class BluetoothService {
         if (status == Device.disconnected) _onDeconnexion();
       });
       _dataSub = _plugin.onDeviceDataReceived().listen(_onData);
-      await _plugin.connect(adresse, "00001101-0000-1000-8000-00805f9b34fb");
+      await _plugin.connect(adresse, _sppUuid);
       etat.value = EtatBluetooth.connecte;
     } catch (e) {
       etat.value = EtatBluetooth.erreur;
