@@ -1,0 +1,39 @@
+name: balance_connect_e
+description: Application de balance connectée via Bluetooth – mesure, chiffrement AES, stockage local et courbe du poids.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Bluetooth Classic (SPP – compatible HC-05/HC-06 pour Arduino)
+  bluetooth_classic: ^0.0.4
+
+  # Chiffrement AES + décodage Base64
+  encrypt: ^5.0.3
+
+  # Graphique du poids
+  fl_chart: ^0.68.0
+
+  # Permissions runtime (Bluetooth, localisation)
+  permission_handler: ^11.3.0
+
+  # Persistance des paramètres (clé AES, etc.)
+  shared_preferences: ^2.2.3
+
+  # Formatage des dates
+  intl: ^0.19.0
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
