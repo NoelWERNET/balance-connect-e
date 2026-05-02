@@ -1,5 +1,5 @@
-name: balance_connect
-description: Application de balance connectée via Bluetooth à une carte Arduino.
+name: balance_pro
+description: Application de balance connectée - Version Production
 publish_to: 'none'
 
 version: 1.0.0+1

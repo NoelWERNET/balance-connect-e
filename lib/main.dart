@@ -2,28 +2,28 @@ import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
 
 void main() {
-  runApp(const BalanceConnectApp());
+  runApp(const BalanceProApp());
 }
 
-class BalanceConnectApp extends StatelessWidget {
-  const BalanceConnectApp({super.key});
+class BalanceProApp extends StatelessWidget {
+  const BalanceProApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Balance Connectée',
+      title: 'Balance PRO',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF1565C0),
+          seedColor: const Color(0xFF2E7D32),
           brightness: Brightness.light,
         ),
       ),
       darkTheme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF1565C0),
+          seedColor: const Color(0xFF2E7D32),
           brightness: Brightness.dark,
         ),
       ),
