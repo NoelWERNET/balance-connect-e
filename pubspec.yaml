@@ -1,5 +1,5 @@
-name: balance_pro
-description: Application de balance connectée - Version Production
+name: balance_maintenance
+description: Application de balance connectée - Maintenance
 publish_to: 'none'
 
 version: 1.0.0+1
