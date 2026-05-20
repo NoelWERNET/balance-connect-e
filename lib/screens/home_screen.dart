@@ -314,24 +314,13 @@ class _HomeScreenState extends State<HomeScreen> {
               enfant: Column(
                 children: [
                   _BoutonCommande(
-                    libelle: 'Zéro (0 kg)',
+                    libelle: 'Tarage planche (remplace zéro)',
                     icone: Icons.exposure_zero,
                     couleur: theme.colorScheme.tertiary,
                     actif: estConnecte,
                     onPressed: () => _envoyerCommande(
-                      '0',
-                      '📤 Envoi zéro kg à l\'Arduino…',
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  _BoutonCommande(
-                    libelle: 'Tarer',
-                    icone: Icons.balance,
-                    couleur: theme.colorScheme.secondary,
-                    actif: estConnecte,
-                    onPressed: () => _envoyerCommande(
                       '1',
-                      '📤 Demande de tarage envoyée…',
+                      '📤 Demande de tarage planche envoyée…',
                     ),
                   ),
                   const SizedBox(height: 10),

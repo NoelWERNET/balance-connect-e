@@ -5,8 +5,7 @@ Application Flutter/Dart de balance connectée via Bluetooth à une carte Arduin
 ## Fonctionnalités
 
 - 🔵 **Connexion Bluetooth** à un appareil Arduino appairé
-- ⚖️ **Zéro kg** : règle le zéro de la balance
-- 🔧 **Tarage** : tare la balance avec une masse de référence
+- ⚖️ **Tarage planche** : tare la balance avec le poids de la planche (remplace le zéro)
 - 📏 **Mesure** : récupère le poids chiffré (AES + Base64), le déchiffre et l'affiche
 - 💾 **Historique** : stocke jusqu'à 50 mesures localement (FIFO)
 - 📈 **Courbe du poids** : graphique de l'évolution dans le temps
@@ -15,8 +14,7 @@ Application Flutter/Dart de balance connectée via Bluetooth à une carte Arduin
 
 | Commande envoyée | Action Arduino         | Réponse Arduino             |
 |-----------------|------------------------|-----------------------------|
-| `"0"`           | Règle le zéro          | message texte de confirmation |
-| `"1"`           | Demande de tarage      | `"balance prete"`           |
+| `"1"`           | Tarage planche (remplace le zéro) | `"balance prete"`           |
 | `"2"`           | Demande de mesure      | mesure chiffrée (AES-ECB + Base64) |
 
 ## Structure du projet
